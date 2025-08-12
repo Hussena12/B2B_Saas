@@ -26,6 +26,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@workspace/math':
+        specifier: workspace:*
+        version: link:../../packages/math
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -66,6 +69,9 @@ importers:
 
   apps/widget:
     dependencies:
+      '@workspace/math':
+        specifier: workspace:*
+        version: link:../../packages/math
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -106,6 +112,9 @@ importers:
 
   packages/eslint-config:
     devDependencies:
+      '@eslint/js':
+        specifier: ^9.33.0
+        version: 9.33.0
       '@next/eslint-plugin-next':
         specifier: ^15.4.5
         version: 15.4.5
@@ -142,6 +151,15 @@ importers:
       typescript-eslint:
         specifier: ^8.39.0
         version: 8.39.0(eslint@9.32.0(jiti@2.5.1))(typescript@5.9.2)
+
+  packages/math:
+    devDependencies:
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      typescript:
+        specifier: latest
+        version: 5.9.2
 
   packages/typescript-config: {}
 
@@ -255,6 +273,10 @@ packages:
 
   '@eslint/js@9.32.0':
     resolution: {integrity: sha512-BBpRFZK3eX6uMLKz8WxFOBIFFcGFJ/g8XuwjTHCqHROSIsopI+ddn/d5Cfh36+7+e5edVS8dbSHnBNhrLEX0zg==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@eslint/js@9.33.0':
+    resolution: {integrity: sha512-5K1/mKhWaMfreBGJTwval43JJmkip0RmM+3+IuqupeSKNC/Th2Kc7ucaq5ovTSra/OOKB9c58CGSz3QMVbWt0A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/object-schema@2.1.6':
@@ -2499,6 +2521,8 @@ snapshots:
       - supports-color
 
   '@eslint/js@9.32.0': {}
+
+  '@eslint/js@9.33.0': {}
 
   '@eslint/object-schema@2.1.6': {}
 

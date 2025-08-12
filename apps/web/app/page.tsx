@@ -6,6 +6,7 @@ export default function Page() {
       <div className="flex flex-col items-center justify-center gap-4">
         <h1 className="text-2xl font-bold">Hello World/web</h1>
         <Button size="sm">Button</Button>
+        <p>{}</p>
       </div>
     </div>
   );
