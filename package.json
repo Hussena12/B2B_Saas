@@ -18,5 +18,8 @@
   "packageManager": "pnpm@10.4.1",
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "geist": "^1.5.1"
   }
 }
